@@ -1,0 +1,431 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+.modal-container {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  width: 580px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+.modal-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.modal-close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+.modal-close:hover {
+  background: var(--bg-gray);
+  color: var(--text-primary);
+}
+.modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Search */
+.search-box {
+  position: relative;
+  margin-bottom: 16px;
+}
+.search-icon-input {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+.search-box input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(232, 122, 46, 0.1);
+}
+
+/* Customer Search Results */
+.customer-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.customer-search-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+}
+.customer-search-row:hover {
+  border-color: var(--accent-orange);
+  background: var(--accent-orange-light);
+}
+.csr-main {
+  flex: 1;
+}
+.csr-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.csr-email {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+.csr-stats {
+  text-align: center;
+  min-width: 60px;
+}
+.csr-amount {
+  font-size: 14px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.csr-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.csr-arrow {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+.empty-search {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Tip */
+.modal-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--accent-orange-light);
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.tip-icon {
+  color: var(--accent-orange);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Configure Step */
+.config-customer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+.config-customer-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.config-customer-email {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.config-customer-stats {
+  display: flex;
+  gap: 16px;
+}
+.stat-box {
+  text-align: center;
+  padding: 8px 16px;
+  background: var(--bg-gray);
+  border-radius: var(--radius-sm);
+}
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* Payment Insight */
+.payment-insight {
+  padding: 12px 14px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+.insight-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.insight-icon {
+  font-size: 14px;
+}
+.insight-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.payment-insight p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Config Sections */
+.config-section {
+  margin-bottom: 20px;
+}
+.config-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.config-sublabel {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* Sequence Options */
+.sequence-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sequence-option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+}
+.sequence-option:hover {
+  border-color: var(--text-muted);
+}
+.sequence-option.selected {
+  border-width: 2px;
+}
+.seq-opt-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.seq-opt-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.seq-opt-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.recommended-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent-orange);
+  background: var(--accent-orange-light);
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid #fed7aa;
+}
+.seq-opt-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 18px;
+}
+
+/* Invoice Checklist */
+.invoice-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.invoice-check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.1s;
+}
+.invoice-check-row:hover {
+  background: var(--bg-gray);
+}
+.invoice-check-row.not-overdue {
+  opacity: 0.6;
+}
+.invoice-check-row input[type="checkbox"] {
+  accent-color: var(--accent-orange);
+  cursor: pointer;
+}
+.inv-check-id {
+  font-weight: 600;
+  color: var(--accent-blue);
+  min-width: 70px;
+}
+.inv-check-amount {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  min-width: 70px;
+}
+.inv-check-due {
+  color: var(--text-muted);
+  font-size: 12px;
+  flex: 1;
+}
+.inv-check-overdue {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-yellow);
+}
+.inv-check-overdue.warning {
+  color: var(--accent-yellow);
+}
+.inv-check-overdue.critical {
+  color: var(--accent-red);
+}
+.inv-check-upcoming {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Footer */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+.btn-back {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.btn-back:hover {
+  background: var(--bg-gray);
+}
+.btn-enroll {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: var(--accent-orange);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-enroll:hover {
+  background: #d4691f;
+}
+.btn-enroll:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Confirm */
+.confirm-body {
+  text-align: center;
+  padding: 40px 24px;
+}
+.confirm-icon {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-green-light);
+  color: var(--accent-green);
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.confirm-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.confirm-body p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+  line-height: 1.5;
+}

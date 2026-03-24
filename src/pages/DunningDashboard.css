@@ -1,0 +1,346 @@
+/* Dashboard */
+.dashboard {
+  padding: 0;
+}
+
+/* Metrics Bar */
+.metrics-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0;
+}
+.metric {
+  flex: 1;
+  text-align: center;
+}
+.metric-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+.metric-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.metric-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--border-color);
+}
+.filter-pills {
+  display: flex;
+  gap: 6px;
+}
+.filter-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-pill:hover {
+  background: var(--bg-gray);
+}
+.filter-pill.active {
+  background: var(--text-primary);
+  color: white;
+  border-color: var(--text-primary);
+}
+.filter-pill.active .filter-count {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+.add-dunning-btn {
+  margin-left: auto;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: var(--accent-orange);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.add-dunning-btn:hover {
+  background: #d4691f;
+}
+
+.filter-count {
+  font-size: 11px;
+  background: var(--bg-gray);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.customer-table thead th {
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-gray);
+  white-space: nowrap;
+  user-select: none;
+}
+.customer-table thead th:first-child {
+  padding-left: 32px;
+}
+.customer-table thead th.sortable {
+  cursor: pointer;
+}
+.customer-table thead th.sortable:hover {
+  color: var(--text-primary);
+}
+.sort-icon {
+  font-size: 11px;
+  margin-left: 4px;
+}
+.sort-icon.inactive {
+  opacity: 0.3;
+}
+
+/* Customer Row */
+.customer-row {
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.customer-row:hover {
+  background: var(--bg-gray);
+}
+.customer-row td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+.customer-row td:first-child {
+  padding-left: 32px;
+}
+.customer-row.expanded {
+  background: var(--bg-gray);
+}
+.expand-icon {
+  color: var(--text-muted);
+  font-size: 12px;
+  width: 16px;
+}
+.customer-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.customer-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+/* Badges */
+.status-badge {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.risk-badge {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.sequence-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid;
+}
+.override-tag {
+  font-size: 10px;
+  background: var(--accent-purple);
+  color: white;
+  padding: 1px 5px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 80px;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+.progress-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.amount-cell {
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.date-cell {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* Invoice Detail Row */
+.invoice-detail-row td {
+  padding: 0 !important;
+  background: var(--bg-gray);
+  border-bottom: 1px solid var(--border-color);
+}
+.invoice-detail-container {
+  padding: 4px 32px 16px 48px;
+}
+.invoice-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.invoice-detail-table thead th {
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  background: #fafafa;
+}
+.invoice-detail-table tbody td {
+  padding: 10px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+.invoice-detail-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.invoice-id {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--accent-blue);
+}
+.partial-badge {
+  display: inline-block;
+  font-size: 10px;
+  color: var(--accent-yellow);
+  background: var(--accent-yellow-light);
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.original-amount {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+.days-overdue {
+  font-weight: 600;
+  font-size: 13px;
+}
+.days-overdue.warning {
+  color: var(--accent-yellow);
+}
+.days-overdue.critical {
+  color: var(--accent-red);
+}
+.step-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.step-label-text {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.delivery-badge {
+  font-size: 12px;
+  font-weight: 500;
+}
+.invoice-actions {
+  display: flex;
+  gap: 4px;
+}
+.action-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.action-btn:hover {
+  background: var(--bg-gray);
+  border-color: var(--text-muted);
+}

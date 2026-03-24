@@ -1,0 +1,135 @@
+/* App Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placeholder pages */
+.placeholder-page {
+  padding: 80px 40px;
+  text-align: center;
+}
+.placeholder-page h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.placeholder-text {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Page Header / Breadcrumb */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border-color);
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.breadcrumb-icon {
+  font-size: 16px;
+}
+.breadcrumb-sep {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.breadcrumb-current {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+.search-btn:hover {
+  background: var(--bg-gray);
+}
+
+/* Dunning Page */
+.dunning-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.dunning-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dunning Tabs */
+.dunning-tabs {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 0;
+}
+.dunning-tab {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.dunning-tab:hover {
+  color: var(--text-primary);
+}
+.dunning-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-orange);
+}
+.dunning-tabs-right {
+  margin-left: auto;
+}
+.ember-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-orange);
+  background: var(--accent-orange-light);
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ember-btn:hover {
+  background: #fff1e0;
+}
+.ember-icon {
+  font-size: 16px;
+}
+
+.dunning-tab-content {
+  flex: 1;
+  overflow-y: auto;
+}
